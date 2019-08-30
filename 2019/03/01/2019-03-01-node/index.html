@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="-随笔,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="如果我有克星的话，那一定是周四。">
+<meta name="keywords" content="-随笔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="随笔">
+<meta property="og:url" content="http://yoursite.com/2019/03/01/2019-03-01-node/index.html">
+<meta property="og:site_name" content="Feke`blog">
+<meta property="og:description" content="如果我有克星的话，那一定是周四。">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-27T03:47:33.711Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="随笔">
+<meta name="twitter:description" content="如果我有克星的话，那一定是周四。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/03/01/2019-03-01-node/">
+
+
+
+
+
+  <title>随笔 | Feke`blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Feke`blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">feke 的博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/01/2019-03-01-node/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Feke">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Feke`blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">随笔</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-01T11:01:13+08:00">
+                2019-03-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/日记文章/" itemprop="url" rel="index">
+                    <span itemprop="name">日记文章</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>如果我有克星的话，那一定是周四。</p>
+<a id="more"></a>
+<h2 id="03-01"><a href="#03-01" class="headerlink" title="03-01"></a>03-01</h2><p>不用统计都知道有好多个周四失眠到底，然后整个周五无比痛苦，幸好现在住的近，还可以补救。</p>
+<p>虽然有逃避的嫌疑，但现实就是现实，不是喊几句口号就可以改变的。</p>
+<h2 id="03-04"><a href="#03-04" class="headerlink" title="03-04"></a>03-04</h2><p>无</p>
+<h2 id="03-07"><a href="#03-07" class="headerlink" title="03-07"></a>03-07</h2><p><a href="http://news.cctv.com/2019/03/06/VIDElxYQaKX2fE9g0eYmWfeB190306.shtml" target="_blank" rel="noopener">《孙悟空的三个锦囊》</a>（有时效性），刷爆网络，视频中提出三个议题：</p>
+<ol>
+<li><p>治理环境污染 =&gt; 工业制品：药，化工，小商品，等涨价</p>
+</li>
+<li><p>大力发展基建 =&gt; 注水，基建行业的春天，钱多了，就不值钱了</p>
+</li>
+<li><p>看病贵 =&gt; 纳入医保的药多了，医疗系统确实独立性强 =&gt; 吃的起药，销售增多=&gt; 利好？ =&gt; 股市要涨？</p>
+</li>
+</ol>
+<p>虽然每年都说新的一年新的气象，但今年似乎力度更大，生活用品涨价已经很明显了，尤其水果，车厘子一斤上百块，同时能做这个视频，显然也是国家更加重视科技，网络传播的力量了，</p>
+<p>重视了，限制自然就来了，虽然这一条早就有所表现。</p>
+<h2 id="03-12"><a href="#03-12" class="headerlink" title="03-12"></a>03-12</h2><p>昨天突然有个小想法，赶快记下来，别忘了。</p>
+<p><strong>智能杯垫</strong>：</p>
+<blockquote>
+<ol>
+<li>记录我喝了多少水<blockquote>
+<ul>
+<li>压力传感器，记录满水和空杯的重量，推算水的重量 （精度问题？）</li>
+</ul>
+</blockquote>
+</li>
+<li>方便记录喝水的信息<blockquote>
+<ul>
+<li>输出输入端（wifi? 蓝牙？ 红外？）</li>
+</ul>
+</blockquote>
+</li>
+<li>配套软件开发<blockquote>
+<ul>
+<li>查看自己每天喝水情况</li>
+<li>查看自己月度喝水情况</li>
+<li>做报表统计分析喝水情况（并评估健康状态）</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+</blockquote>
+<p>重点：降低成本</p>
+<p>补充，可以搞一点提示：1. 令人舒适的灯光，2. 嗡鸣，3. 简短有力的声音</p>
+<h2 id="03-20"><a href="#03-20" class="headerlink" title="03-20"></a>03-20</h2><p>很多时候，东西理解了，说不出也是问题关键，导致他人理解不了，以至于沟通障碍；先尝试，说话前过脑子来强迫自己思考改善这点。</p>
+<p><strong>时间是很珍贵的东西</strong>，晚上的时间要规划好，睡不好，一整天忙忙碌碌的还啥也没做成，搞得自己还很疲惫。</p>
+<p>以后鸡胸肉要晚上处理了，中午尽量节约时间来睡觉。</p>
+<h2 id="03-26"><a href="#03-26" class="headerlink" title="03-26"></a>03-26</h2><p>不动笔墨不读书，养成好习惯吧。</p>
+<h2 id="03-27"><a href="#03-27" class="headerlink" title="03-27"></a>03-27</h2><p>太怂，每次撒谎时候，做不道德的事的时候，就容易懵逼，脑子一片空白，显然这是不对的。现在晚上处理鸡胸肉了，继续坚持。</p>
+<p>今晚开始看书，备战中级软考，话虽如此，但实际上不能这么想，那个证书只是一个证明，只能证明我有这个证书，并不代表就有那个实力，真正的实力是自己脑子中的知识，不是一纸证明能替代的，所以，看书，学习也是要以学习过程为主，有计划，有目的的进行。</p>
+<h2 id="04-07"><a href="#04-07" class="headerlink" title="04-07"></a>04-07</h2><p>先寄存在这里，明天上传的时候修改一下。</p>
+<p>刚刚看了一部悲情片：《我想吃掉你的胰脏》</p>
+<p>这是一部相当含蓄的故事，男主是个沉郁的人，女主得了不治之症，恰好是胰脏的病，靠药物维持正常的生活，同时也时日无多。</p>
+<p>也许真的是命运的相遇，男主恰好爱看书，恰好与女主在同一天在医院做检查，恰好捡到女主的日记，恰好翻开看到女主不想让人知道自己得了不治之症的事，恰好，男主是个对他人漠不关心的人，不在乎女主的病，恰恰对逞强的女主来说，这种不在乎病情的相处事她最渴望的。</p>
+<p>于是，故事就此展开。</p>
+<p>人生，这个故事从一开始就注定是悲剧，借用一句话，幸福积攒的越多，失去时就越痛苦。</p>
+<p>女主最终却没有死于疾病，反而死于一个之前就埋下种子的意外，早已心生爱意的男主此时痛哭流涕。</p>
+<p>明明早就知道不可能，明明下定决心不动心，做了那么多努力，只想让她多看一眼，即使伤到了自己也无所畏惧，心里有一个人，然后与所有人的相处都像偷偷摸摸，毕竟那个人不是她，怎么都不对，怎么都无所谓。</p>
+<p>然后，尘埃落定，知道消息那一刻，心里好像没多少悲伤，眼泪也不过是挤出来一的一滴，又如何，又如何。</p>
+<p>正常地过完一整天，偶然觉得 雷霆沙赞 这个沙雕电影看的不过瘾，点看b站看到这部清明节上线的 悲情剧，看到男女主天人永隔时竟泪流地不能自已。</p>
+<p>喜欢了太久，不声不响了太久，竟然好像忘记了那份喜欢，但一切到此为止了，接下来的日子就是另一天，对我来说，一个时代过去了。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/随笔/" rel="tag"># -随笔</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/25/2019-02-25-fixed-private-ip/" rel="next" title="固定自己的内网 ip">
+                <i class="fa fa-chevron-left"></i> 固定自己的内网 ip
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/05/2019-03-05-font-family/" rel="prev" title="记录开发中常用的字体">
+                记录开发中常用的字体 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Feke</p>
+              <p class="site-description motion-element" itemprop="description">记，在路上。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">88</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#03-01"><span class="nav-number">1.</span> <span class="nav-text">03-01</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#03-04"><span class="nav-number">2.</span> <span class="nav-text">03-04</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#03-07"><span class="nav-number">3.</span> <span class="nav-text">03-07</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#03-12"><span class="nav-number">4.</span> <span class="nav-text">03-12</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#03-20"><span class="nav-number">5.</span> <span class="nav-text">03-20</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#03-26"><span class="nav-number">6.</span> <span class="nav-text">03-26</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#03-27"><span class="nav-number">7.</span> <span class="nav-text">03-27</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#04-07"><span class="nav-number">8.</span> <span class="nav-text">04-07</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Feke</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

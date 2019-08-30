@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="linux,node,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="linux centos 服务器 配置 node.js ，目标人群就是和我一样毫无基础的小白。">
+<meta name="keywords" content="linux,node">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux centos 服务器 配置 node.js">
+<meta property="og:url" content="http://yoursite.com/2017/12/24/2017-12-24-linux-node/index.html">
+<meta property="og:site_name" content="Feke`blog">
+<meta property="og:description" content="linux centos 服务器 配置 node.js ，目标人群就是和我一样毫无基础的小白。">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2017/12/24/2017-12-24-linux-node/0.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/12/24/2017-12-24-linux-node/1.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/12/24/2017-12-24-linux-node/2.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/24/2017-12-24-linux-node/3.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/24/2017-12-24-linux-node/4.png">
+<meta property="og:updated_time" content="2019-08-27T03:47:33.664Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux centos 服务器 配置 node.js">
+<meta name="twitter:description" content="linux centos 服务器 配置 node.js ，目标人群就是和我一样毫无基础的小白。">
+<meta name="twitter:image" content="http://yoursite.com/2017/12/24/2017-12-24-linux-node/0.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/12/24/2017-12-24-linux-node/">
+
+
+
+
+
+  <title>linux centos 服务器 配置 node.js | Feke`blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Feke`blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">feke 的博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/24/2017-12-24-linux-node/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Feke">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Feke`blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">linux centos 服务器 配置 node.js</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-24T20:02:25+08:00">
+                2017-12-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/服务端-linux/" itemprop="url" rel="index">
+                    <span itemprop="name">服务端--linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>linux centos 服务器 配置 node.js ，目标人群就是和我一样毫无基础的小白。<br><a id="more"></a></p>
+<h2 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h2><ul>
+<li><p>买了国内某云服务器;</p>
+</li>
+<li><p>安装<a href="https://www.putty.org/" target="_blank" rel="noopener">PuTTY</a>,输入服务器唯一物理ip后，登录到服务器;</p>
+</li>
+<li><p>使用linux安装了<a href="https://www.bt.cn/btcode.html" target="_blank" rel="noopener">宝塔面板</a>，以及一堆推荐服务。</p>
+</li>
+</ul>
+<p><strong>注意：安装完成后记得保留账户密码</strong></p>
+<p><img src="/2017/12/24/2017-12-24-linux-node/./0.jpg" alt></p>
+<h2 id="开始装-node-js"><a href="#开始装-node-js" class="headerlink" title="开始装 node.js"></a>开始装 node.js</h2><p><strong>注意：“ $ ”符意味着这句是linux命令，没有的是命令打印内容</strong></p>
+<p><strong>注意：查看自己 linux 版本，例如64位下载64位的node</strong></p>
+<p>安装方法很多，我们这里找省时省力又简单的：yum? =&gt; wget =&gt; node =&gt; 解压</p>
+<p>测试有没有 wget (一款 Linux 服务器便捷远程下载安装的插件 )</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ wget -h</span><br><span class="line"></span><br><span class="line">// 稀里哗啦一大堆就是安装了</span><br><span class="line"></span><br><span class="line">// 只有这一句就是没装</span><br><span class="line">-bash: wget: command not found</span><br></pre></td></tr></table></figure>
+<p>没装的话也很简单，yum 安装一下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum install -y wget</span><br></pre></td></tr></table></figure>
+<p>接着去找合你心意的 node.js ，<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">官网</a></p>
+<p><img src="/2017/12/24/2017-12-24-linux-node/./1.jpg" alt></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget</span><br></pre></td></tr></table></figure>
+<p>查看一下文件名，接着按步骤解压，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ ls</span><br><span class="line">node-v10.15.0-linux-x64.tar.xz</span><br><span class="line"></span><br><span class="line">$ xz -d node-v10.15.0-linux-x64.tar.xz</span><br><span class="line"></span><br><span class="line">$ ls</span><br><span class="line">node-v10.15.0-linux-x64.tar</span><br><span class="line"></span><br><span class="line">$ tar -xf node-v10.15.0-linux-x64.tar</span><br><span class="line"></span><br><span class="line">$ ls</span><br><span class="line"></span><br><span class="line">node-v10.15.0-linux-x64  node-v10.15.0-linux-x64.tar</span><br></pre></td></tr></table></figure>
+<p>接着建立全局软连接，注意换成你自己的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ ln -s /node/node-v10.15.0-linux-x64/bin/node /usr/local/bin/node</span><br><span class="line">$ ln -s /node/node-v10.15.0-linux-x64/bin/npm /usr/local/bin/npm</span><br><span class="line"></span><br><span class="line">// 然后测试一下</span><br><span class="line"></span><br><span class="line">$ node -v</span><br><span class="line">v10.15.0</span><br><span class="line"></span><br><span class="line">$ npm -v</span><br><span class="line">6.4.1</span><br></pre></td></tr></table></figure>
+<h3 id="继续安装-express"><a href="#继续安装-express" class="headerlink" title="继续安装 express"></a>继续安装 express</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm install express -gd // 全局安装express </span><br><span class="line">$ npm install express-generator -g // 全局安装experss生成器</span><br><span class="line">$ ln -s /node/node-v8.9.3-linux-x64/bin/express /usr/local/bin/express // 建立全局软连接</span><br><span class="line">$ express --version // 查看是否安装成功</span><br></pre></td></tr></table></figure>
+<p><img src="/2017/12/24/2017-12-24-linux-node/./2.png" alt></p>
+<h3 id="开个服务器做测试"><a href="#开个服务器做测试" class="headerlink" title="开个服务器做测试"></a>开个服务器做测试</h3><h4 id="端口，安全"><a href="#端口，安全" class="headerlink" title="端口，安全"></a>端口，安全</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd node                     // 打开工程目录</span><br><span class="line">express server_01           // 生成项目模板</span><br><span class="line">cd server_01 &amp;&amp; npm install // 打开目录并安装依赖</span><br><span class="line">npm start                   // 开始运行程序</span><br></pre></td></tr></table></figure>
+<p>然后本地访问 <code>...:3000</code> ,为啥404了？</p>
+<p>百思不得姐，</p>
+<p>突然想到现在已经安装了宝塔面板，宝塔帮忙安装了Nginx，是不是产生冲突了？另一方面可以用宝塔测试3000端口啊，</p>
+<p>于是，建了一个3000端口的php 站点，测试外网访问服务器的3000端口是可以拿到站点信息的，</p>
+<p>删除刚测试用的站点，重新登录linux，运行node服务器，这次成功打印出 express 字眼。</p>
+<p>于是想到：<strong>会不会是宝塔建站帮我做了一些配置呢？</strong></p>
+<p>查看宝塔安全管理，果然，3000 端口刚刚被加入可访问序列。</p>
+<h4 id="守护进程"><a href="#守护进程" class="headerlink" title="守护进程"></a>守护进程</h4><p>运行起服务器，利用宝塔生成一个 ftp 账户用来管理 node 服务器的文件，关掉 PuTTy ，发现服务无法访问了。</p>
+<p>想到也许和 window 系统跑 node 一样，开着 cmd 程序运行，不开就停止服务，</p>
+<p>查资料后，找到关键字：<strong>“守护进程”</strong>，</p>
+<p>node.js 守护进程方法很多,应当按使用场合选择技术：</p>
+<ol>
+<li>supervisor : 开发环境使用，非常适合调试。</li>
+<li>forever : 管理多个站点，每个站点访问量不大，不需要监控</li>
+<li>pm2 : 网站访问量比较大，需要完整的监控界面</li>
+<li>nohup : 最简单的办法 nohup node app.js &amp;</li>
+</ol>
+<p>这里选择了 <a href="https://github.com/foreverjs/forever" target="_blank" rel="noopener">forever</a> ，</p>
+<p>跟着教程 <code>npm install forever -g</code> ,安装完后发现：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">forever --help</span><br><span class="line">-bash: forever: command not found</span><br></pre></td></tr></table></figure>
+<p>联想到之前 express 全局安装后也是手动安装的软连接，也许是某些配置没有配置好？PATH？</p>
+<p>再次使用 ln -s 生成软连接：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s 你的node目录+/lib/node_modules/forever/bin/forever /usr/local/bin</span><br></pre></td></tr></table></figure>
+<p>之后就可以全局使用forever了。</p>
+<p>打开之前建立的server_01,执行:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">forever start ./bin/www // express模板跑服务器</span><br></pre></td></tr></table></figure>
+<p>然后关掉PuTTY也可以访问我们的服务了</p>
+<h4 id="常用-forever-命令："><a href="#常用-forever-命令：" class="headerlink" title="常用 forever 命令："></a>常用 forever 命令：</h4><blockquote>
+<ul>
+<li>forever start test.js|[pid] // 后台开启服务。</li>
+<li>forever stop test.js|[pid] // 停止后台服务。</li>
+<li>forever restart test.js|[pid] // 重启后台服务。</li>
+<li>forever list test.js|[pid] // 打印现有服务。</li>
+</ul>
+</blockquote>
+<h4 id="配置-mysql"><a href="#配置-mysql" class="headerlink" title="配置 mysql"></a>配置 mysql</h4><p>之前宝塔面板已经帮我们把 mysql 安装好了,然后我们自己安装 node.js 的 mysql 管理：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install mysql</span><br></pre></td></tr></table></figure>
+<p>想要操作数据库先要有库可用，所以我们先用之前安装好的phpMyAdmin新建数据库，做测试所以名字用了test。</p>
+<p><img src="/2017/12/24/2017-12-24-linux-node/./3.png" alt></p>
+<p>并且建立一张用户表，三个参数，id，user_name，user_password，并输入一条初始数据</p>
+<p><img src="/2017/12/24/2017-12-24-linux-node/./4.png" alt></p>
+<p>然后尝试在我们的node程序中调用数据库:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">var mysql = require(&apos;mysql&apos;); // 引入</span><br><span class="line"></span><br><span class="line">var connection = mysql.createConnection(&#123;   // 配置链接信息</span><br><span class="line">    host: &apos;localhost&apos;,  // 数据库地址，一般在本地</span><br><span class="line">    user: &apos;...&apos;,        // 用户名</span><br><span class="line">    password: &apos;...&apos;,    // 密码</span><br><span class="line">    database: &apos;...&apos;     // 表名</span><br><span class="line">&#125;); </span><br><span class="line">/*</span><br><span class="line">    具体使用时建议封装逻辑，</span><br><span class="line">    先建立链接，query请求数据，</span><br><span class="line">    请求完毕后关闭链接。</span><br><span class="line">*/</span><br><span class="line">connection.connect();</span><br><span class="line">connection.query(&apos;SELECT * FROM user&apos;, (err, rows, fields) =&gt; &#123;</span><br><span class="line">    if (err) throw err;</span><br><span class="line">    console.log(rows);</span><br><span class="line">&#125;);</span><br><span class="line">connection.end();</span><br></pre></td></tr></table></figure>
+<p>简单做一个测试接口看看能否获取数据库信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">router.get(&apos;/getUser&apos;, (req, res, next) =&gt; &#123;</span><br><span class="line">    var connection = mysql.createConnection(mysqlConfig);  // 注意每次查询数据库都需要重新生成链接对象。</span><br><span class="line">    connection.connect();</span><br><span class="line">    connection.query(&apos;SELECT * FROM user&apos;, (err, rows, fields) =&gt; &#123;</span><br><span class="line">        if (err) throw err;</span><br><span class="line">        console.log(rows);</span><br><span class="line">        connection.end();</span><br><span class="line">        res.send(rows)</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>浏览器访问服务器ip:3000/getUser,成功打印出信息。 :)</p>
+<h3 id="linux-常用指令"><a href="#linux-常用指令" class="headerlink" title="linux 常用指令"></a>linux 常用指令</h3><ul>
+<li>鼠标滑动选中目录名，右键鼠标就可以复制了。</li>
+<li>cd dirName 打开文件夹，cd .. 打开上级文件夹</li>
+<li>ls 查看当前文件夹内容</li>
+<li>rm 文件目录：删除对应文件目录；rm -rf 文件目录：删除对应文件目录的文件夹,-r递归删除，-f强行删除，不做提示</li>
+<li>wget 远程路径：下载对应路径文件到当前文件夹。</li>
+<li>xz -d **.tar.xz ：解压xz后缀的压缩文件</li>
+<li>tar -xv -f **.tar : 解压tar后缀的压缩文件。</li>
+<li>ln -s /path_to/bin/node /usr/local/bin/node : 建立软连接，使之可以全局运行，path_to是实际文件夹路径</li>
+<li>echo ：打印某些东西，比如 echo $PATH 打印环境变量</li>
+<li>find 文件路径： 查找文件。<ul>
+<li>-name ： 根据文件名查找</li>
+<li>-iname : 根据文件名查找文件，忽略大小写</li>
+<li>-path : 根据路径查找文件</li>
+<li>-ipath : 根据路劲查找文件，忽略大小写</li>
+<li>-amin &lt;分钟&gt; : 过去N分钟内访问的文件</li>
+<li>-atime &lt;天数&gt; ： 过去N天内访问的文件</li>
+<li>-cmin &lt;分钟&gt; ：过去N分钟内修改过的文件</li>
+<li>-ctime &lt;天数&gt; : 过去N天内修改过的文件</li>
+<li>-anewer &lt;参照文件&gt; ： 比参照文件更晚被读取过的文件</li>
+</ul>
+</li>
+<li>cat /etc/redhat-release ： 查看系统版本</li>
+<li>df : 查看磁盘占用程度</li>
+<li>du -sh * : 查看当前文件夹下各文件及文件夹所占内存</li>
+<li>mv 要复制的目录 复制到的目录: 移动文件夹时要加 -r 递归复制所有文件</li>
+<li>cp 要复制的目录 复制到的目录: 复制文件夹时要加 -r 递归复制所有文件</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag"># linux</a>
+          
+            <a href="/tags/node/" rel="tag"># node</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/24/2017-12-24-sorting-jsx/" rel="next" title="使用js实现几种常见的排序算法">
+                <i class="fa fa-chevron-left"></i> 使用js实现几种常见的排序算法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/26/2017-12-26-flex-box/" rel="prev" title="flex-box 弹性布局">
+                flex-box 弹性布局 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Feke</p>
+              <p class="site-description motion-element" itemprop="description">记，在路上。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">88</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备环境"><span class="nav-number">1.</span> <span class="nav-text">准备环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始装-node-js"><span class="nav-number">2.</span> <span class="nav-text">开始装 node.js</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#继续安装-express"><span class="nav-number">2.1.</span> <span class="nav-text">继续安装 express</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开个服务器做测试"><span class="nav-number">2.2.</span> <span class="nav-text">开个服务器做测试</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#端口，安全"><span class="nav-number">2.2.1.</span> <span class="nav-text">端口，安全</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#守护进程"><span class="nav-number">2.2.2.</span> <span class="nav-text">守护进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用-forever-命令："><span class="nav-number">2.2.3.</span> <span class="nav-text">常用 forever 命令：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置-mysql"><span class="nav-number">2.2.4.</span> <span class="nav-text">配置 mysql</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#linux-常用指令"><span class="nav-number">2.3.</span> <span class="nav-text">linux 常用指令</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Feke</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
