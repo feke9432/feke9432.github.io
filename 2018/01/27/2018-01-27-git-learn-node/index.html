@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Feke`blog">
 <meta property="og:description" content="学习使用 git 管理项目版本，使用 github 做远程仓库保管代码已经很久了，但一直没有成建制地记录 git 相关知识点，所谓不动笔墨不读书，特地开一篇新博文记录些基础知识，以及实际使用过程中遇到的问题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-27T03:47:33.675Z">
+<meta property="og:updated_time" content="2019-09-03T02:37:00.467Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="有关 git 的学习笔记">
 <meta name="twitter:description" content="学习使用 git 管理项目版本，使用 github 做远程仓库保管代码已经很久了，但一直没有成建制地记录 git 相关知识点，所谓不动笔墨不读书，特地开一篇新博文记录些基础知识，以及实际使用过程中遇到的问题。">
@@ -381,6 +381,15 @@
 <li><p>添加远程仓库</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add orgin 远程地址</span><br></pre></td></tr></table></figure>
 </li>
+<li><p>显示所有远程分支</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git show-ref &lt;--[tag|heads|...]&gt;</span><br><span class="line"># d222276df74f0d87e6fd12ea06b7ee6511355452 refs/tags/test</span><br></pre></td></tr></table></figure>
+<ul>
+<li>删除远程分支</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push origin :&lt;分支名&gt;</span><br><span class="line">$ git push origin :refs/tags/test</span><br></pre></td></tr></table></figure>
+<ul>
 <li><p>添加改动到缓存区</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add &lt;filename&gt;</span><br></pre></td></tr></table></figure>
 </li>
