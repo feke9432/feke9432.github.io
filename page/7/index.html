@@ -40,7 +40,7 @@
 
   
   
-  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -48,21 +48,21 @@
 
 
 
-<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
 
 
-  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
 
 
 
@@ -95,7 +95,7 @@
 <script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/blog/',
+    root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
@@ -153,7 +153,7 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/blog/"  class="brand" rel="start">
+      <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Feke`blog</span>
         <span class="logo-line-after"><i></i></span>
@@ -181,7 +181,7 @@
       
         
         <li class="menu-item menu-item-home">
-          <a href="/blog/" rel="section">
+          <a href="/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
@@ -191,7 +191,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/blog/about/" rel="section">
+          <a href="/about/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
@@ -201,7 +201,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/blog/tags/" rel="section">
+          <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -211,7 +211,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/blog/categories/" rel="section">
+          <a href="/categories/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
             
@@ -221,7 +221,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/blog/archives/" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -262,12 +262,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/04/03/2018-04-03-node-count/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/03/2018-04-03-node-count/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Feke">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -281,7 +281,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/04/03/2018-04-03-node-count/" itemprop="url">用 node.js 做一个简单的统计系统</a></h1>
+                <a class="post-title-link" href="/2018/04/03/2018-04-03-node-count/" itemprop="url">用 node.js 做一个简单的统计系统</a></h1>
         
 
         <div class="post-meta">
@@ -316,7 +316,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/服务端-node/" itemprop="url" rel="index">
+                  <a href="/categories/服务端-node/" itemprop="url" rel="index">
                     <span itemprop="name">服务端--node</span>
                   </a>
                 </span>
@@ -357,7 +357,7 @@
           <p>今天领导让在活动页里添加一段统计代码测试跑得流量是否可靠，然后给了一个某平台的账号，类似于傻瓜式的在合适的位置加了一句话，工作就结束了，恰好之后的时间没事做，索性自己写了一个简易版本练手。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/04/03/2018-04-03-node-count/#espandi" rel="contents">
+            <a class="btn" href="/2018/04/03/2018-04-03-node-count/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -408,12 +408,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/04/03/2018-04-03-node/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/03/2018-04-03-node/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Feke">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -427,7 +427,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/04/03/2018-04-03-node/" itemprop="url">随笔</a></h1>
+                <a class="post-title-link" href="/2018/04/03/2018-04-03-node/" itemprop="url">随笔</a></h1>
         
 
         <div class="post-meta">
@@ -462,7 +462,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/日记文章/" itemprop="url" rel="index">
+                  <a href="/categories/日记文章/" itemprop="url" rel="index">
                     <span itemprop="name">日记文章</span>
                   </a>
                 </span>
@@ -503,7 +503,7 @@
           <p>随笔，不是一天之随笔，而是一整个月的偶得之秒思。<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/04/03/2018-04-03-node/#espandi" rel="contents">
+            <a class="btn" href="/2018/04/03/2018-04-03-node/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -554,12 +554,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/04/01/2018-04-01-the-48-questions-that-lead-to-love/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/01/2018-04-01-the-48-questions-that-lead-to-love/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Feke">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -573,7 +573,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/04/01/2018-04-01-the-48-questions-that-lead-to-love/" itemprop="url">让陌生人迅速相爱的36个问题</a></h1>
+                <a class="post-title-link" href="/2018/04/01/2018-04-01-the-48-questions-that-lead-to-love/" itemprop="url">让陌生人迅速相爱的36个问题</a></h1>
         
 
         <div class="post-meta">
@@ -608,7 +608,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/日记文章/" itemprop="url" rel="index">
+                  <a href="/categories/日记文章/" itemprop="url" rel="index">
                     <span itemprop="name">日记文章</span>
                   </a>
                 </span>
@@ -652,7 +652,7 @@
 <p>曼迪·莱恩·卡特隆(Mandy Len Catron)为“现代爱情”专栏写了一篇文章《如何快速与陌生人相爱》，她在文中提到心理学家阿瑟·亚伦(Arthur Aron)等人的研究成果：两个陌生人之间的亲密关系或许可以通过彼此询问一些特别的个人化问题而快速升温。这36个问题分为三组，一组比一组来得寻根究底。<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/04/01/2018-04-01-the-48-questions-that-lead-to-love/#espandi" rel="contents">
+            <a class="btn" href="/2018/04/01/2018-04-01-the-48-questions-that-lead-to-love/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -703,12 +703,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/04/01/2018-04-01-march-comes-in-like-a-lion/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/01/2018-04-01-march-comes-in-like-a-lion/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Feke">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -722,7 +722,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/04/01/2018-04-01-march-comes-in-like-a-lion/" itemprop="url">四月一，三月的狮子完结</a></h1>
+                <a class="post-title-link" href="/2018/04/01/2018-04-01-march-comes-in-like-a-lion/" itemprop="url">四月一，三月的狮子完结</a></h1>
         
 
         <div class="post-meta">
@@ -757,7 +757,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/日记文章/" itemprop="url" rel="index">
+                  <a href="/categories/日记文章/" itemprop="url" rel="index">
                     <span itemprop="name">日记文章</span>
                   </a>
                 </span>
@@ -799,7 +799,7 @@
 <p>我是如此喜欢这部作品，但又有种欲辨已忘言，话明明到了嘴边，想说却不知道从何说起的感觉。<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/04/01/2018-04-01-march-comes-in-like-a-lion/#espandi" rel="contents">
+            <a class="btn" href="/2018/04/01/2018-04-01-march-comes-in-like-a-lion/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -850,12 +850,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/03/30/2018-03-30-html-meta-httpequiv/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/30/2018-03-30-html-meta-httpequiv/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Feke">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -869,7 +869,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/03/30/2018-03-30-html-meta-httpequiv/" itemprop="url">Meta 表签文档阅读</a></h1>
+                <a class="post-title-link" href="/2018/03/30/2018-03-30-html-meta-httpequiv/" itemprop="url">Meta 表签文档阅读</a></h1>
         
 
         <div class="post-meta">
@@ -904,7 +904,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/前端-html/" itemprop="url" rel="index">
+                  <a href="/categories/前端-html/" itemprop="url" rel="index">
                     <span itemprop="name">前端--html</span>
                   </a>
                 </span>
@@ -948,7 +948,7 @@
 <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>HTML <meta> 元素表示不能由其他 html 源相关元素 表示的其他源数据信息。<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/03/30/2018-03-30-html-meta-httpequiv/#espandi" rel="contents">
+            <a class="btn" href="/2018/03/30/2018-03-30-html-meta-httpequiv/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -999,12 +999,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/03/25/2018-03-25-dom-relation/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/25/2018-03-25-dom-relation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Feke">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1018,7 +1018,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/03/25/2018-03-25-dom-relation/" itemprop="url">从兄弟节点到 dom 分级</a></h1>
+                <a class="post-title-link" href="/2018/03/25/2018-03-25-dom-relation/" itemprop="url">从兄弟节点到 dom 分级</a></h1>
         
 
         <div class="post-meta">
@@ -1053,7 +1053,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/前端-js/" itemprop="url" rel="index">
+                  <a href="/categories/前端-js/" itemprop="url" rel="index">
                     <span itemprop="name">前端--js</span>
                   </a>
                 </span>
@@ -1094,7 +1094,7 @@
           <p>本来想找当前节点的兄弟节点的原生写法，找到文章却很陌生，用 Can I use 测试却意外注意到了一句话 <code>DOM Core Level 2 properties</code> ,之前听<a href="http://www.heibaipig.com/" target="_blank" rel="noopener">老黑</a>说过 DOM 分级的事情,那时候还不太明白什么是 DOM ，这次突然再次被提起，于是决定仔细看看。<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/03/25/2018-03-25-dom-relation/#espandi" rel="contents">
+            <a class="btn" href="/2018/03/25/2018-03-25-dom-relation/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1145,12 +1145,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/03/16/2018-03-16-outaku-love/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/16/2018-03-16-outaku-love/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Feke">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1164,7 +1164,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/03/16/2018-03-16-outaku-love/" itemprop="url">宅男之恋 观后感</a></h1>
+                <a class="post-title-link" href="/2018/03/16/2018-03-16-outaku-love/" itemprop="url">宅男之恋 观后感</a></h1>
         
 
         <div class="post-meta">
@@ -1199,7 +1199,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/日记文章/" itemprop="url" rel="index">
+                  <a href="/categories/日记文章/" itemprop="url" rel="index">
                     <span itemprop="name">日记文章</span>
                   </a>
                 </span>
@@ -1240,7 +1240,7 @@
           <p>偶然在 b 站看到了这部电影，因为总是以宅男自居而引起兴趣，于是度过了很美好的一个半小时。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/03/16/2018-03-16-outaku-love/#espandi" rel="contents">
+            <a class="btn" href="/2018/03/16/2018-03-16-outaku-love/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1291,12 +1291,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/03/04/2018-03-04-node/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/04/2018-03-04-node/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Feke">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1310,7 +1310,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/03/04/2018-03-04-node/" itemprop="url">随笔</a></h1>
+                <a class="post-title-link" href="/2018/03/04/2018-03-04-node/" itemprop="url">随笔</a></h1>
         
 
         <div class="post-meta">
@@ -1345,7 +1345,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/日记文章/" itemprop="url" rel="index">
+                  <a href="/categories/日记文章/" itemprop="url" rel="index">
                     <span itemprop="name">日记文章</span>
                   </a>
                 </span>
@@ -1386,7 +1386,7 @@
           <p>随笔，不是一天之随笔，而是一整个月的偶得之秒思。<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/03/04/2018-03-04-node/#espandi" rel="contents">
+            <a class="btn" href="/2018/03/04/2018-03-04-node/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1437,12 +1437,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/03/03/2018-03-03-cmd-tracert/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/03/2018-03-03-cmd-tracert/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Feke">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1456,7 +1456,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/03/03/2018-03-03-cmd-tracert/" itemprop="url">检查 ip 或域名被墙的几种方法</a></h1>
+                <a class="post-title-link" href="/2018/03/03/2018-03-03-cmd-tracert/" itemprop="url">检查 ip 或域名被墙的几种方法</a></h1>
         
 
         <div class="post-meta">
@@ -1491,7 +1491,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/常用软件/" itemprop="url" rel="index">
+                  <a href="/categories/常用软件/" itemprop="url" rel="index">
                     <span itemprop="name">常用软件</span>
                   </a>
                 </span>
@@ -1533,7 +1533,7 @@
 <p>虽然一般而言被墙都是 GFW 干的，但也不排除有人恶意破坏。<br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/03/03/2018-03-03-cmd-tracert/#espandi" rel="contents">
+            <a class="btn" href="/2018/03/03/2018-03-03-cmd-tracert/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1584,12 +1584,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2018/02/23/2018-02-23-es6-node/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/23/2018-02-23-es6-node/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Feke">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1603,7 +1603,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/2018/02/23/2018-02-23-es6-node/" itemprop="url">es6 学习笔记</a></h1>
+                <a class="post-title-link" href="/2018/02/23/2018-02-23-es6-node/" itemprop="url">es6 学习笔记</a></h1>
         
 
         <div class="post-meta">
@@ -1638,7 +1638,7 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/前端-js/" itemprop="url" rel="index">
+                  <a href="/categories/前端-js/" itemprop="url" rel="index">
                     <span itemprop="name">前端--js</span>
                   </a>
                 </span>
@@ -1680,7 +1680,7 @@
 <p>学习资料主要使用，阮一峰老师的<a href="http://es6.ruanyifeng.com/" target="_blank" rel="noopener">《ECMAScript 6 入门》</a><br></p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/blog/2018/02/23/2018-02-23-es6-node/#espandi" rel="contents">
+            <a class="btn" href="/2018/02/23/2018-02-23-es6-node/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1722,7 +1722,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/blog/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/blog/page/8/">8</a><a class="page-number" href="/blog/page/9/">9</a><a class="extend next" rel="next" href="/blog/page/8/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1766,7 +1766,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="/blog/archives/">
+                <a href="/archives/">
               
                   <span class="site-state-item-count">89</span>
                   <span class="site-state-item-name">日志</span>
@@ -1778,7 +1778,7 @@
               
               
               <div class="site-state-item site-state-categories">
-                <a href="/blog/categories/index.html">
+                <a href="/categories/index.html">
                   <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
@@ -1789,7 +1789,7 @@
               
               
               <div class="site-state-item site-state-tags">
-                <a href="/blog/tags/index.html">
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
@@ -1904,60 +1904,60 @@
 
   
   
-    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
   
 
   
   
-    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
   
 
   
   
-    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
   
 
   
   
-    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
 
 
   
 
 
-  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
 
-  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/blog/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/blog/js/src/schemes/pisces.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
 
 
 
   
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
 
   
 
 
-  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
