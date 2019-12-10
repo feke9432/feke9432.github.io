@@ -262,6 +262,130 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/09/2019-12-09-x1c-config/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Feke">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Feke`blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/09/2019-12-09-x1c-config/" itemprop="url">2019-12-09-x1c-config</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-09T14:25:35+08:00">
+                2019-12-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>x1c 2018 详细配置表</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/12/09/2019-12-09-x1c-config/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/02/2019-12-02-babel-learn-node/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -354,37 +478,14 @@
 
       
         
-          
-            <a id="more"></a>
-<h2 id="学习文字思维图"><a href="#学习文字思维图" class="headerlink" title="学习文字思维图"></a>学习文字思维图</h2><p>babel (js 编译器(AST(抽象语法树)转换)：语法转换，添加环境缺失的polyfill，源码转换) =&gt; </p>
-<p>核心 @babel/core &lt;]<br>命令行工具 @babel/cli =&gt; babel src –out-dir lib watch &lt;]<br>插件系统(plugins) =&gt; </p>
-<p>语法插件，转换插件 =&gt; </p>
-<p>@babel-polyfill(为浏览器添加新的 API 片段集) =&gt; </p>
-<p>core-js &lt;]</p>
-<p>regenerator &lt;]</p>
-<p>缺点: 大（89kb） 、污染全局变量 &lt;]</p>
-<p>@babel/plugin-transform-runtime(避免编译后的代码中出现重复的帮助程序，有效减少包体积，避免全局污染) =&gt; </p>
-<p>配合 @babel/runtime 使用 &lt;]</p>
-<p>不支持实例方法 如：<code>[1,2,3].includes(1)</code>,但配合 @babel/runtime-corejs3 可以</p>
-<p>需要处理 polyfill 的多次引用的话 添加 @babel/runtime-corejs3 &lt;]&lt;]&lt;]</p>
-<p>预设(presets: 一组相互配合的插件) =&gt;</p>
-<p>官方 Preset =&gt; </p>
-<p>@babel/preset-env(对目标浏览器缺失功能进行转换和加载polyfill) =&gt; </p>
-<p>浏览器环境配置(<a href="https://github.com/browserslist/browserslist" target="_blank" rel="noopener">.browserslistrc</a>) &lt;]</p>
-<p>参数配置 =&gt;</p>
-<p>useBuiltIns(按需引入) =&gt; usage &lt;]</p>
-<p><a href="https://github.com/zloirock/core-js" target="_blank" rel="noopener">corejs</a>(JavaScript 的模块化标准库) =&gt; 3(最新特性集) &lt;]&lt;]&lt;]</p>
-<p>插件和预设的执行原则 =&gt;</p>
-<p>Plugin 最先执行 &lt;]</p>
-<p>Plugins 数组从小的角标小的开始执行&lt;]</p>
-<p>Presets 从数组末尾脚本开始执行 &lt;]&lt;]</p>
-<h2 id="常用的babel配置文件"><a href="#常用的babel配置文件" class="headerlink" title="常用的babel配置文件"></a>常用的babel配置文件</h2><p>.bablerc<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&#123; </span><br><span class="line">  <span class="attr">"presets"</span>: [ </span><br><span class="line">    [<span class="string">"@babel/preset-env"</span>, &#123; </span><br><span class="line">      "modules": false, // 模块使用 es modules ，不使用 commonJS 规范 </span><br><span class="line">      "useBuiltIns": "usage", // usage-按需引入 entry-入口引入（整体引入） false-不引入polyfill </span><br><span class="line">      "corejs": 3 // 就是以前的babel-polyfill </span><br><span class="line">    &#125;], </span><br><span class="line">    <span class="string">"@babel/preset-react"</span> </span><br><span class="line">  ], </span><br><span class="line">  "plugins": [ </span><br><span class="line">    ["@babel/plugin-proposal-decorators", &#123; // 解析类的装饰器 </span><br><span class="line">      "legacy": true </span><br><span class="line">    &#125;], </span><br><span class="line">    ["@babel/plugin-proposal-class-properties", &#123; // 解析class语法 </span><br><span class="line">      "loose": true </span><br><span class="line">    &#125;], </span><br><span class="line">    // https://babeljs.io/docs/en/babel-plugin-transform-runtime#docsNavbabeljs.io/docs/en/babel-... </span><br><span class="line">    // 去除重复代码 </span><br><span class="line">    // A plugin that enables the re-use of Babel's injected helper code to save on codesize </span><br><span class="line">    [ </span><br><span class="line">      <span class="string">"@babel/plugin-transform-runtime"</span>, </span><br><span class="line">      &#123; </span><br><span class="line">        // 上面presets useBuiltIns写了，这里就不用写了 </span><br><span class="line">        // "corejs": 3, // you can directly import "core-js" or use @babel/preset-env's useBuiltIns option. </span><br><span class="line">        "helpers": true, // 默认 </span><br><span class="line">        "regenerator": false, // 通过 preset-env 已经使用了全局的 regeneratorRuntime, 不再需要 transform-runtime 提供的 不污染全局的 regeneratorRuntime </span><br><span class="line">        "useESModules": true // 使用 es modules helpers, 减少 commonJS 语法代码 </span><br><span class="line">      &#125; </span><br><span class="line">    ], </span><br><span class="line">    // https://babeljs.io/docs/en/next/babel-plugin-syntax-dynamic-import.htmlbabeljs.io/docs/en/next/b... </span><br><span class="line">    "@babel/plugin-syntax-dynamic-import" // 懒加载 </span><br><span class="line">  ] </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>简易版<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"presets"</span>: [</span><br><span class="line">    [</span><br><span class="line">      <span class="string">"@babel/preset-env"</span>, &#123;</span><br><span class="line">        <span class="attr">"useBuiltIns"</span>: <span class="string">"usage"</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"plugins"</span>: [</span><br><span class="line">    <span class="string">"@babel/plugin-transform-runtime"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>.browserslistrc<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; 1%</span><br><span class="line">last 2 versions</span><br><span class="line">Firefox ESR</span><br><span class="line">not ie 10</span><br><span class="line">not ie_mob 10</span><br><span class="line"></span><br><span class="line">[development]</span><br><span class="line">last 1 chrome version</span><br></pre></td></tr></table></figure></p>
-<p>webpack<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>: &#123;</span><br><span class="line">  rules: [</span><br><span class="line">    &#123;</span><br><span class="line">        &#123;</span><br><span class="line">          test: <span class="regexp">/\.js$/</span>,</span><br><span class="line">          exclude: <span class="function"><span class="params">file</span> =&gt;</span> /node_modules/.test(file),</span><br><span class="line">          loader: <span class="string">'babel-loader'</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>package.json<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">"devDependencies": &#123;</span><br><span class="line">  "@babel/core": "^7.2.2",</span><br><span class="line">  "@babel/plugin-transform-runtime": "^7.2.0",</span><br><span class="line">  "@babel/preset-env": "^7.2.3",</span><br><span class="line">  "@babel/runtime": "^7.2.0",</span><br><span class="line">  "babel-loader": "^8.0.4",</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-
-          
+          <p>sdf<br></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/12/02/2019-12-02-babel-learn-node/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -538,6 +639,16 @@
 <li><p>看了文章：<a href="https://juejin.im/post/5ddff3abe51d4502d56bd143?utm_source=gold_browser_extension" target="_blank" rel="noopener">你不得不了解的Babel</a></p>
 </li>
 </ul>
+<h2 id="12-06"><a href="#12-06" class="headerlink" title="12-06"></a>12-06</h2><p>今天熬夜把黑苹果装上了，尽管动不动就自动重启，不过已经非常满意了，</p>
+<p>网卡驱动想都没想，直接一个 usb 3.0 接口连手机分享wifi使用，还别说，挺快！</p>
+<p>不仅如此，还解决了一个win10 长久恶心我的问题，就是拖影，现在即使是纯黑的vscode也不会颜色变化，甚至觉得还挺鲜艳。</p>
+<p>苹果还是蛮好用的。</p>
+<h2 id="12-09"><a href="#12-09" class="headerlink" title="12-09"></a>12-09</h2><p>周六周日两天时间终于把黑苹果整好了，但实际解决的问题不过是下载了一个万能驱动而已，看来大部分问题都是<strong>驱动问题</strong>.</p>
+<p>但睡眠还是不行，只是关掉了屏幕电源，实际主板没有休眠，这样看可能是主板驱动问题。</p>
+<p>【你那是一睡就醒，所以风扇一直转，usb口的问题，修改一下dsdt就好了】<a href="http://bbs.pcbeta.com/forum.php?mod=viewthread&amp;tid=1535728" target="_blank" rel="noopener">http://bbs.pcbeta.com/forum.php?mod=viewthread&amp;tid=1535728</a></p>
+<p>一个不错的免费黑苹果文章：<a href="https://www.kancloud.cn/q952008898/hei_ping_guo/1117535" target="_blank" rel="noopener">给没有远景论坛账号的同学</a></p>
+<p>大部分功能完好，最主要是使用usb链接手机上网这个操作很骚气，不仅节省了无线网卡的钱，而且还很快，比本机的网卡快，所以之前 windows 时候是驱动错误，还是黑心商人换了我的无线网卡呢。</p>
+<p>今天项目上线了，可能会很忙，但下午可以打盹一下。</p>
 
           
         
@@ -1610,152 +1721,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/28/2019-05-28-node/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Feke">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Feke`blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/05/28/2019-05-28-node/" itemprop="url">随笔</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-28T11:01:30+08:00">
-                2019-05-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/日记文章/" itemprop="url" rel="index">
-                    <span itemprop="name">日记文章</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>吹再多牛逼，路还在脚下。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/05/28/2019-05-28-node/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1806,7 +1771,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">94</span>
+                  <span class="site-state-item-count">95</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Feke`blog">
 <meta property="og:description" content="学习使用 git 管理项目版本，使用 github 做远程仓库保管代码已经很久了，但一直没有成建制地记录 git 相关知识点，所谓不动笔墨不读书，特地开一篇新博文记录些基础知识，以及实际使用过程中遇到的问题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-03T02:37:00.467Z">
+<meta property="og:updated_time" content="2019-12-02T08:35:47.010Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="有关 git 的学习笔记">
 <meta name="twitter:description" content="学习使用 git 管理项目版本，使用 github 做远程仓库保管代码已经很久了，但一直没有成建制地记录 git 相关知识点，所谓不动笔墨不读书，特地开一篇新博文记录些基础知识，以及实际使用过程中遇到的问题。">
@@ -471,6 +471,10 @@
 <h4 id="简单代码步骤"><a href="#简单代码步骤" class="headerlink" title="简单代码步骤"></a>简单代码步骤</h4><p>git check -b newBranch =&gt; git add . =&gt; git commit -m”some thing” =&gt; git checkout master =&gt; git merge newBranch =&gt; git branch -d newBranch</p>
 <h3 id="git-忽略大小写问题"><a href="#git-忽略大小写问题" class="headerlink" title="git 忽略大小写问题"></a>git 忽略大小写问题</h3><p>开发代码中很多时候是要求区分大小写的，所以为了不必要的困扰，执行以下语句：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config core.ignorecase false</span><br></pre></td></tr></table></figure>
+<h3 id="git-提交-themes-next-失败"><a href="#git-提交-themes-next-失败" class="headerlink" title="git 提交 themes/next 失败"></a>git 提交 themes/next 失败</h3><p>报错信息:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Changes not staged for commit:</span><br><span class="line">  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)</span><br><span class="line">  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)</span><br><span class="line">  (commit or discard the untracked or modified content in submodules)</span><br><span class="line"></span><br><span class="line">        modified:   themes/next (modified content)</span><br></pre></td></tr></table></figure></p>
+<p>解决办法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 删除缓存后重新添加</span><br><span class="line">git rm --cache themes/next</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -589,7 +593,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">94</span>
+                  <span class="site-state-item-count">95</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -644,7 +648,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础"><span class="nav-number">1.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用指令"><span class="nav-number">2.</span> <span class="nav-text">常用指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-gt-everything-up-to-date-解决"><span class="nav-number">2.1.</span> <span class="nav-text">git =&gt; everything up-to-date 解决</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#简单代码步骤"><span class="nav-number">2.1.1.</span> <span class="nav-text">简单代码步骤</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-忽略大小写问题"><span class="nav-number">2.2.</span> <span class="nav-text">git 忽略大小写问题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础"><span class="nav-number">1.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用指令"><span class="nav-number">2.</span> <span class="nav-text">常用指令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-gt-everything-up-to-date-解决"><span class="nav-number">2.1.</span> <span class="nav-text">git =&gt; everything up-to-date 解决</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#简单代码步骤"><span class="nav-number">2.1.1.</span> <span class="nav-text">简单代码步骤</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-忽略大小写问题"><span class="nav-number">2.2.</span> <span class="nav-text">git 忽略大小写问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-提交-themes-next-失败"><span class="nav-number">2.3.</span> <span class="nav-text">git 提交 themes/next 失败</span></a></li></ol></li></ol></div>
             
 
           </div>
