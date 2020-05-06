@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="linux,git,hexo," />
+  <meta name="keywords" content="linux,hexo,git," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="最进国内访问外网越来越差了，所以迁移博客到自己的服务器。">
-<meta name="keywords" content="linux,git,hexo">
+<meta name="description" content="最进国内访问外网越来越差了，所以迁移博客到私人服务器。">
+<meta name="keywords" content="linux,hexo,git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="记一次移动博客到自己的服务器">
 <meta property="og:url" content="http://yoursite.com/2020/05/06/2020-05-06-cahange-blog-source/index.html">
 <meta property="og:site_name" content="Feke`blog">
-<meta property="og:description" content="最进国内访问外网越来越差了，所以迁移博客到自己的服务器。">
+<meta property="og:description" content="最进国内访问外网越来越差了，所以迁移博客到私人服务器。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-05-06T09:14:37.531Z">
+<meta property="og:updated_time" content="2020-05-06T09:18:30.435Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记一次移动博客到自己的服务器">
-<meta name="twitter:description" content="最进国内访问外网越来越差了，所以迁移博客到自己的服务器。">
+<meta name="twitter:description" content="最进国内访问外网越来越差了，所以迁移博客到私人服务器。">
 
 
 
@@ -352,7 +352,7 @@
       
 
       
-        <p>最进国内访问外网越来越差了，所以迁移博客到自己的服务器。<br><a id="more"></a></p>
+        <p>最进国内访问外网越来越差了，所以迁移博客到私人服务器。<br><a id="more"></a></p>
 <p>本文主要参考了 <a href="https://www.jianshu.com/p/70bf58c48010" target="_blank" rel="noopener">HEXO 部署到云服务器详细指南</a>，这里就我自己遇到 问题进行补充。</p>
 <h2 id="一、环境安装"><a href="#一、环境安装" class="headerlink" title="一、环境安装"></a>一、环境安装</h2><h3 id="1-1-node-js-安装"><a href="#1-1-node-js-安装" class="headerlink" title="1.1 node js 安装"></a>1.1 node js 安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install nodejs</span><br></pre></td></tr></table></figure>
 <p>验证：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v </span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure></p>
@@ -423,6 +423,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">drwsr-xr-x  2 git git  4096 May  6 17:09 css</span><br><span class="line">drwsr-xr-x  2 git git  4096 May  6 17:09 images</span><br><span class="line">-rw-------  1 git git 47124 May  6 17:09 index.html</span><br></pre></td></tr></table></figure>
 <p>而我们 nginx 的用户为 root，这里改 仓库 所有者为 root</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R root:root /var/www/hexo</span><br></pre></td></tr></table></figure>
+<p>再次推送到私有库，发现权限自动设置为755了。</p>
 
       
     </div>
@@ -442,9 +443,9 @@
           
             <a href="/tags/linux/" rel="tag"># linux</a>
           
-            <a href="/tags/git/" rel="tag"># git</a>
-          
             <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+            <a href="/tags/git/" rel="tag"># git</a>
           
         </div>
       
