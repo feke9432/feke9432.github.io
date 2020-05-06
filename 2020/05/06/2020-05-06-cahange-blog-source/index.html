@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Feke`blog">
 <meta property="og:description" content="最进国内访问外网越来越差了，所以迁移博客到自己的服务器。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-05-06T09:13:29.775Z">
+<meta property="og:updated_time" content="2020-05-06T09:14:37.531Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记一次移动博客到自己的服务器">
 <meta name="twitter:description" content="最进国内访问外网越来越差了，所以迁移博客到自己的服务器。">
@@ -423,6 +423,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">drwsr-xr-x  2 git git  4096 May  6 17:09 css</span><br><span class="line">drwsr-xr-x  2 git git  4096 May  6 17:09 images</span><br><span class="line">-rw-------  1 git git 47124 May  6 17:09 index.html</span><br></pre></td></tr></table></figure>
 <p>而我们 nginx 的用户为 root，这里改 仓库 所有者为 root</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R root:root /var/www/hexo</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
