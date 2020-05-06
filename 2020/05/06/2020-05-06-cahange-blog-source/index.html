@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Feke`blog">
 <meta property="og:description" content="最进国内访问外网越来越差了，所以迁移博客到自己的服务器。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-05-06T08:13:44.094Z">
+<meta property="og:updated_time" content="2020-05-06T08:38:38.506Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记一次移动博客到自己的服务器">
 <meta name="twitter:description" content="最进国内访问外网越来越差了，所以迁移博客到自己的服务器。">
@@ -397,7 +397,7 @@
 <p>然后执行<code>hexo g -d</code>将文件上传到你部署的服务器上，如果上传成功</p>
 <h2 id="四、nginx配置"><a href="#四、nginx配置" class="headerlink" title="四、nginx配置"></a>四、nginx配置</h2><p>最后，为了能让浏览器能直接访问静态页面，需要使用nginx将端口或域名指向hexo静态文件目录</p>
 <h3 id="4-1-修改-NGINX-的-DEFAULT-设置"><a href="#4-1-修改-NGINX-的-DEFAULT-设置" class="headerlink" title="4.1 修改 NGINX 的 DEFAULT 设置"></a>4.1 修改 NGINX 的 DEFAULT 设置</h3><p>ubuntu<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/nginx/sites-available/default</span><br></pre></td></tr></table></figure></p>
-<p>centos<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure></p>
+<p>centos<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/nginx/conf.d/</span><br><span class="line">// fedora版本:</span><br><span class="line">vim /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure></p>
 <p>注意：不同版本的nginx或系统，nginx的配置文件不一定相同，根据具体情况来修改配置</p>
 <h3 id="4-2-将其中的-ROOT-指令指向-var-www-hexo-目录（也就是GIT钩子目录）"><a href="#4-2-将其中的-ROOT-指令指向-var-www-hexo-目录（也就是GIT钩子目录）" class="headerlink" title="4.2 将其中的 ROOT 指令指向 /var/www/hexo 目录（也就是GIT钩子目录）"></a>4.2 将其中的 ROOT 指令指向 /var/www/hexo 目录（也就是GIT钩子目录）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    listen [::]:80;</span><br><span class="line">    root /var/www/hexo; # 修改的地方</span><br><span class="line">    server_name laoyuyu.me www.laoyuyu.me; # 如果需要改域名访问，修改server_name 为域名便可</span><br><span class="line">    location / &#123;</span><br><span class="line">            # First attempt to serve request as file, then</span><br><span class="line">            # as directory, then fall back to displaying a 404.</span><br><span class="line">            try_files $uri $uri/ =404;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="4-3-最后重启服务，让NGINX生效"><a href="#4-3-最后重启服务，让NGINX生效" class="headerlink" title="4.3 最后重启服务，让NGINX生效"></a>4.3 最后重启服务，让NGINX生效</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service nginx restart</span><br></pre></td></tr></table></figure>
@@ -418,7 +418,7 @@
 <ol>
 <li>权限问题，如果nginx没有web目录的操作权限，也会出现403错误。</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod -R 777 /var/www/hexo</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod -R 755 /var/www/hexo</span><br></pre></td></tr></table></figure>
 <h3 id="4-5-好像每次推送后都要重新设置权限"><a href="#4-5-好像每次推送后都要重新设置权限" class="headerlink" title="4.5 好像每次推送后都要重新设置权限"></a>4.5 好像每次推送后都要重新设置权限</h3><p>怎么解决呢。。。</p>
 <p>再试试</p>
 
