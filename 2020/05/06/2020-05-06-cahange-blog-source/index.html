@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Feke`blog">
 <meta property="og:description" content="最进国内访问外网越来越差了，所以迁移博客到自己的服务器。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-05-06T09:09:17.338Z">
+<meta property="og:updated_time" content="2020-05-06T09:13:29.775Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记一次移动博客到自己的服务器">
 <meta name="twitter:description" content="最进国内访问外网越来越差了，所以迁移博客到自己的服务器。">
@@ -419,10 +419,10 @@
 <li>权限问题，如果nginx没有web目录的操作权限，也会出现403错误。</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod -R 755 /var/www/hexo</span><br></pre></td></tr></table></figure>
-<h3 id="4-5-好像每次推送后都要重新设置权限"><a href="#4-5-好像每次推送后都要重新设置权限" class="headerlink" title="4.5 好像每次推送后都要重新设置权限"></a>4.5 好像每次推送后都要重新设置权限</h3><p>怎么解决呢。。。</p>
-<p>再试试</p>
-<p>chmod -R 4755 /var/www/hexo</p>
-
+<h3 id="4-5-好像每次推送后都要重新设置权限"><a href="#4-5-好像每次推送后都要重新设置权限" class="headerlink" title="4.5 好像每次推送后都要重新设置权限"></a>4.5 好像每次推送后都要重新设置权限</h3><p>查看后是文件所有人不对，这里是git</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">drwsr-xr-x  2 git git  4096 May  6 17:09 css</span><br><span class="line">drwsr-xr-x  2 git git  4096 May  6 17:09 images</span><br><span class="line">-rw-------  1 git git 47124 May  6 17:09 index.html</span><br></pre></td></tr></table></figure>
+<p>而我们 nginx 的用户为 root，这里改 仓库 所有者为 root</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R root:root /var/www/hexo</span><br></pre></td></tr></table></figure>
       
     </div>
     
